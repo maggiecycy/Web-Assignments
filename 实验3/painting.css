@@ -1,0 +1,109 @@
+/* ============================================
+   Oil Painting Appreciation - Museum Style
+   Experiment 3 - Task 2
+   ============================================ */
+
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Georgia", "Songti SC", "SimSun", serif;
+    background: #f4f0ec; /* 调整为更温暖的博物馆墙面灰白色 */
+    color: #333;
+    line-height: 1.8;
+    padding: 3rem 2rem;
+    max-width: 1000px; /* 稍微加宽，给画作更多呼吸空间 */
+    margin: 0 auto;
+  }
+  
+  /* Centered main title */
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: normal; /* 艺术展标题通常不加粗，显得更优雅 */
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 1rem;
+  }
+  
+  /* Intro / description section */
+  .intro {
+    margin-bottom: 3rem;
+    color: #444;
+  }
+  
+  .intro p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    text-indent: 2em;
+  }
+  
+  /* Gallery: exactly 2 rows, 3 images per row */
+  .painting-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem; /* 增大画作之间的间距，更有展厅感 */
+    margin-top: 2rem;
+  }
+  
+  /* Museum Frame Styling */
+  .painting-item {
+    background: #ffffff;
+    padding: 16px 16px 24px 16px; /* 模拟画框内部的白色卡纸留白（底部稍微留多点放文字） */
+    
+    /* 调整为更深邃古典的勃艮第红/暗红，去掉了刺眼的粉红色 */
+    border: 10px solid #8b2525; 
+    outline: 2px solid #5a1818; 
+    outline-offset: -2px; /* 让边框更有层次 */
+    
+    /* 增强立体阴影，模拟画框挂在墙上的感觉 */
+    box-shadow: 
+      0 10px 20px rgba(0, 0, 0, 0.15),
+      inset 0 0 4px rgba(0, 0, 0, 0.05);
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .painting-item:hover {
+    transform: translateY(-5px); /* 悬浮时微微浮起 */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  .painting-item img {
+    width: 100%;
+    height: 280px; /* 【核心修改】强制统一高度 */
+    object-fit: cover; /* 【核心修改】智能裁剪填充，绝不拉伸变形 */
+    object-position: center; /* 聚焦在图片正中间 */
+    display: block;
+    border: 1px solid #e0e0e0; /* 给图片本身加一个极细的边框，与白色卡纸区分 */
+  }
+  
+  /* Caption styling */
+  .painting-item figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic; /* 博物馆说明文字常用的斜体 */
+    color: #666;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Responsive: stack on small screens */
+  @media (max-width: 800px) {
+    .painting-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .painting-gallery {
+      grid-template-columns: 1fr;
+    }
+  }

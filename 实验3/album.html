@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电子音乐相册</title>
+  <link rel="stylesheet" href="album.css">
+</head>
+<body>
+  <header>
+    <h1>电子音乐相册</h1>
+  </header>
+
+  <!-- Background music -->
+  <div class="audio-control">
+    <audio controls loop autoplay>
+      <source src="bgm.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Thumbnail grid: 18 images, no scroll -->
+  <main class="gallery">
+    <figure class="gallery-item">
+      <a href="T1.jpg" target="_blank" title="照片 1" data-large="T1.jpg">
+        <img src="T1.jpg" alt="Thumbnail 1" onerror="this.src='https://via.placeholder.com/150?text=1'">
+        <span class="tooltip">照片 1 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T2.jpg" target="_blank" title="照片 2" data-large="T2.jpg">
+        <img src="T2.jpg" alt="Thumbnail 2" onerror="this.src='https://via.placeholder.com/150?text=2'">
+        <span class="tooltip">照片 2 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T3.jpg" target="_blank" title="照片 3" data-large="T3.jpg">
+        <img src="T3.jpg" alt="Thumbnail 3" onerror="this.src='https://via.placeholder.com/150?text=3'">
+        <span class="tooltip">照片 3 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T4.jpg" target="_blank" title="照片 4" data-large="T4.jpg">
+        <img src="T4.jpg" alt="Thumbnail 4" onerror="this.src='https://via.placeholder.com/150?text=4'">
+        <span class="tooltip">照片 4 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T5.jpg" target="_blank" title="照片 5" data-large="T5.jpg">
+        <img src="T5.jpg" alt="Thumbnail 5" onerror="this.src='https://via.placeholder.com/150?text=5'">
+        <span class="tooltip">照片 5 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T6.jpg" target="_blank" title="照片 6" data-large="T6.jpg">
+        <img src="T6.jpg" alt="Thumbnail 6" onerror="this.src='https://via.placeholder.com/150?text=6'">
+        <span class="tooltip">照片 6 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T7.jpg" target="_blank" title="照片 7" data-large="T7.jpg">
+        <img src="T7.jpg" alt="Thumbnail 7" onerror="this.src='https://via.placeholder.com/150?text=7'">
+        <span class="tooltip">照片 7 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T8.jpg" target="_blank" title="照片 8" data-large="T8.jpg">
+        <img src="T8.jpg" alt="Thumbnail 8" onerror="this.src='https://via.placeholder.com/150?text=8'">
+        <span class="tooltip">照片 8 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T9.jpg" target="_blank" title="照片 9" data-large="T9.jpg">
+        <img src="T9.jpg" alt="Thumbnail 9" onerror="this.src='https://via.placeholder.com/150?text=9'">
+        <span class="tooltip">照片 9 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T10.jpg" target="_blank" title="照片 10" data-large="T10.jpg">
+        <img src="T10.jpg" alt="Thumbnail 10" onerror="this.src='https://via.placeholder.com/150?text=10'">
+        <span class="tooltip">照片 10 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T11.jpg" target="_blank" title="照片 11" data-large="T11.jpg">
+        <img src="T11.jpg" alt="Thumbnail 11" onerror="this.src='https://via.placeholder.com/150?text=11'">
+        <span class="tooltip">照片 11 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T12.jpg" target="_blank" title="照片 12" data-large="T12.jpg">
+        <img src="T12.jpg" alt="Thumbnail 12" onerror="this.src='https://via.placeholder.com/150?text=12'">
+        <span class="tooltip">照片 12 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T13.jpg" target="_blank" title="照片 13" data-large="T13.jpg">
+        <img src="T13.jpg" alt="Thumbnail 13" onerror="this.src='https://via.placeholder.com/150?text=13'">
+        <span class="tooltip">照片 13 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T14.jpg" target="_blank" title="照片 14" data-large="T14.jpg">
+        <img src="T14.jpg" alt="Thumbnail 14" onerror="this.src='https://via.placeholder.com/150?text=14'">
+        <span class="tooltip">照片 14 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T15.jpg" target="_blank" title="照片 15" data-large="T15.jpg">
+        <img src="T15.jpg" alt="Thumbnail 15" onerror="this.src='https://via.placeholder.com/150?text=15'">
+        <span class="tooltip">照片 15 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T16.jpg" target="_blank" title="照片 16" data-large="T16.jpg">
+        <img src="T16.jpg" alt="Thumbnail 16" onerror="this.src='https://via.placeholder.com/150?text=16'">
+        <span class="tooltip">照片 16 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T17.jpg" target="_blank" title="照片 17" data-large="T17.jpg">
+        <img src="T17.jpg" alt="Thumbnail 17" onerror="this.src='https://via.placeholder.com/150?text=17'">
+        <span class="tooltip">照片 17 - 点击查看大图</span>
+      </a>
+    </figure>
+    <figure class="gallery-item">
+      <a href="T18.jpg" target="_blank" title="照片 18" data-large="T18.jpg">
+        <img src="T18.jpg" alt="Thumbnail 18" onerror="this.src='https://via.placeholder.com/150?text=18'">
+        <span class="tooltip">照片 18 - 点击查看大图</span>
+      </a>
+    </figure>
+  </main>
+
+  <!-- Modal for large image (optional enhancement) -->
+  <div class="modal-overlay" id="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="关闭">×</button>
+      <img id="modalImage" src="" alt="大图">
+    </div>
+  </div>
+
+  <script>
+    // Optional: open large image in modal instead of new tab
+    (function () {
+      var galleryLinks = document.querySelectorAll('.gallery-item a[data-large]');
+      var modal = document.getElementById('modal');
+      var modalImage = document.getElementById('modalImage');
+      var modalClose = document.getElementById('modalClose');
+
+      galleryLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var largeSrc = link.getAttribute('data-large');
+          if (largeSrc) {
+            e.preventDefault();
+            modalImage.src = largeSrc;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+          }
+        });
+      });
+
+      function closeModal() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+
+      modalClose.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

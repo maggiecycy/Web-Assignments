@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>今世缘茶吧</title>
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-repeat: no-repeat; 
+            background-size: cover;
+            background-position: center; /* 确保背景图居中显示最佳光影 */
+            color: #e8dcc4; /* 将文字改为温暖的宣纸白/米色 */
+            /* 增加楷体/宋体作为后备字体，增加古典感 */
+            font-family: "PingFang SC", "Microsoft YaHei", "STKaiti", serif; 
+            margin: 0;
+            /* 使用Flex布局将菜单垂直居中，稍微靠左，避开右侧倒茶的视觉焦点 */
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            padding-left: 10%;
+        }
+        .menu-container {
+            /* 核心：深色半透明背景配合毛玻璃效果，完美融入暗调背景 */
+            background-color: rgba(20, 15, 10, 0.65); 
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 40px 50px;
+            border-radius: 8px;
+            max-width: 400px;
+            /* 边缘加上极细的金色高光线，提升质感 */
+            border: 1px solid rgba(212, 163, 115, 0.2); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+        h2 { 
+            color: #d4a373; /* 琥珀色/茶色作为主色调 */
+            border-bottom: 1px solid rgba(212, 163, 115, 0.3); 
+            padding-bottom: 15px; 
+            margin-top: 0;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: normal; /* 去掉粗体，显得更雅致 */
+        }
+        ul, dl { line-height: 2; font-size: 16px; }
+        dt { color: #d4a373; margin-top: 10px; } /* 强调项使用茶色 */
+        dd { margin-left: 20px; color: #bcaaa4; } /* 描述项使用更暗的灰色，拉开层次 */
+        hr {
+            border: 0;
+            border-top: 1px dashed rgba(212, 163, 115, 0.3); /* 分割线改为柔和的虚线 */
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h2>今世缘茶吧 -- 服务项目</h2>
+        <ul>
+            <li>咖啡：20元</li>
+            <li>茶
+                <dl>
+                    <dt>红茶：30元</dt>
+                    <dt>绿茶</dt>
+                    <dd>中国茶：55元</dd>
+                    <dd>非洲茶：45元</dd>
+                </dl>
+            </li>
+            <li>牛奶：10元</li>
+        </ul>
+        <hr>
+        <dl>
+            <dt>联系人：</dt><dd>张三</dd>
+            <dt>联系地址：</dt><dd>中国台湾</dd>
+            <dt>邮政编码：</dt><dd>999079</dd>
+        </dl>
+    </div>
+</body>
+</html>

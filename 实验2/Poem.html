@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>古诗词欣赏</title>
+    <style>
+        body {
+            /* 替换为你的背景图名称 */
+            background-image: url('lantern.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a; /* 兜底暗色 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "STZhongsong", "SimSun", serif;
+        }
+        .poem-box {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            letter-spacing: 4px;
+            line-height: 2.5;
+            padding: 40px;
+            /* 暗调半透明毛玻璃，透出背景的光晕 */
+            background: rgba(20, 15, 10, 0.5);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(212, 163, 115, 0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            border-radius: 6px;
+        }
+        /* 标题使用柔和的暖金色，加入左边框作为古典点缀 */
+        h1 { 
+            font-size: 24px; 
+            color: #d4a373; 
+            margin-left: 30px; 
+            font-weight: normal;
+            border-left: 1px solid rgba(212, 163, 115, 0.5);
+            padding-left: 10px;
+        }
+        /* 正文使用宣纸色 */
+        p { font-size: 18px; color: #e8dcc4; }
+
+        /* 极简深色悬浮按钮 */
+        .music-btn {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            /* 核心修改：深黑色半透明底色，与背景拉开对比 */
+            background: rgba(62, 59, 59, 0.65); 
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(205, 176, 147, 0.4);
+            color: #bcad8e; /* 亮色文字，一眼可见 */
+            font-family: "STZhongsong", serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        .music-btn:hover {
+            background: rgba(42, 40, 40, 0.85);
+            border-color: #d4a373;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        .playing { animation: spin 5s linear infinite; }
+    </style>
+</head>
+<body>
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()">乐</button>
+
+    <div class="poem-box">
+        <h1>水调歌头·明月几时有</h1>
+        <p>
+            明月几时有？把酒问青天。<br>
+            不知天上宫阙，今夕是何年。<br>
+            我欲乘风归去，又恐琼楼玉宇，<br>
+            高处不胜寒。起舞弄清影，何似在人间。<br><br>
+            转朱阁，低绮户，照无眠。<br>
+            不应有恨，何事长向别时圆？<br>
+            人有悲欢离合，月有阴晴圆缺，<br>
+            此事古难全。但愿人长久，千里共婵娟。
+        </p>
+    </div>
+    
+    <audio id="bgMusic" src="moon.mp3" loop></audio>
+
+    <script>
+        var music = document.getElementById('bgMusic');
+        var btn = document.getElementById('musicBtn');
+        
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                btn.classList.add('playing');
+            } else {
+                music.pause();
+                btn.classList.remove('playing');
+            }
+        }
+    </script>
+</body>
+</html>
